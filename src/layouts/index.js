@@ -1,23 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+import datalegreya from 'datalegreya'
+import stylesheet from './index.css'
 
-const TemplateWrapper = ({ children }) =>
+const MainLayout = ({ children }) =>
   <main>
-    <Helmet
-      title='Gatsby Default Starter'
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}/>
+    <Helmet title='Gatsby Default Starter' style={[ datalegreya, stylesheet ]}/>
     <div>{ children() }</div>
   </main>
 
-TemplateWrapper.propTypes = {
+MainLayout.propTypes = {
   children: PropTypes.func,
 }
 
-export default TemplateWrapper
+export default MainLayout
