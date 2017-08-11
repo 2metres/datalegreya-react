@@ -6,12 +6,13 @@ const n = (string) =>
   Math.floor(Math.random() * 4) + string + '|'
 
 const now = new Date()
-const hoursAndMinutes = now.getHours() + ':' + now.getMinutes()
+const minutes = now.getMinutes() > 9 ? now.getMinutes() : '0' + now.getMinutes()
+const hoursAndMinutes = now.getHours() + ':' + minutes
 
 const Altimeter = () =>
   <h1 className={ styles.root }>
     {
-      '   ' +
+      '    ' +
       `{${hoursAndMinutes}}` + '§' +
       n('a') +
       n('l') +
@@ -22,8 +23,8 @@ const Altimeter = () =>
       n('t') +
       n('e') +
       n('r') +
-      '1[26°c [17°c['
-    }
+      '1'
+    }<span className={styles.highlight}>[26°c [17°c[</span>
   </h1>
 
 export default Altimeter
