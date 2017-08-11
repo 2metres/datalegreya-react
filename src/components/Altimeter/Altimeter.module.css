@@ -2,13 +2,13 @@
   width: 100%;
 }
 
-h1 {
+.title {
   font-family: 'Datalegreya-Dot', sans-serif;
   text-align: center;
-  color: coral;
   font-size: 18vw;
+  color: coral;
 }
 
 .highlight {
-  color: white;
+  color: coral;
 }

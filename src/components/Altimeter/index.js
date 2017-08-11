@@ -7,13 +7,12 @@ const º = (string) =>
 
 const now = new Date()
 const minutes = now.getMinutes() > 9 ? now.getMinutes() : '0' + now.getMinutes()
-const hoursAndMinutes = now.getHours() / 2 + ':' + minutes
+const hoursAndMinutes = now.getHours() -1 + ':' + minutes
 
 const Altimeter = () =>
-  <h1 className={ styles.root }>
-    {
-      '    ' +
-      `{${hoursAndMinutes}}` + '§' +
+  <h1 className={ styles.title }>   {
+      '     ' +
+      `{${hoursAndMinutes}}§` +
       º('a') +
       º('l') +
       º('t') +
