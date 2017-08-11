@@ -5,25 +5,16 @@ import Helmet from 'react-helmet'
 
 import './index.css'
 
-const Header = () =>
-  <div>
-    <h1>
-      <Link to="/">Gatsby</Link>
-    </h1>
-  </div>
-
 const TemplateWrapper = ({ children }) =>
-  <div>
+  <main>
     <Helmet
-      title="Gatsby Default Starter"
+      title='Gatsby Default Starter'
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
+      ]}/>
     <div>{ children() }</div>
-  </div>
+  </main>
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
